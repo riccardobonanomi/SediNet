@@ -14,3 +14,5 @@ __pycache__/*
 # ignore trained models and logs
 *.txt
 *.hdf5
+*.json
+*.png
