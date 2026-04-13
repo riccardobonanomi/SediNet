@@ -112,6 +112,19 @@ If you do NOT want to use your GPU for computations with tensorflow, edit the `c
 conda env create -f conda_env/sedinet.yml
 ```
 
+keep in mind to verify that ```tensorflow-estimator``` needs to have the same version as ```tensorflow```, which can be done as 
+
+```
+conda install tensorflow-estimator=x.x.x
+```
+
+and that ```tensorflow-addons``` needs to be a specific version based on the ```tensorflow``` flow version as specified in this [webpage](https://stackoverflow.com/questions/65464463/importerror-cannot-import-name-keras-tensor-from-tensorflow-python-keras-eng), which can be done with 
+
+```
+pip install tensorflow-addons==x.x.x
+```
+
+The you can use the environment as usual as
 ```
 conda activate sedinet
 ```
