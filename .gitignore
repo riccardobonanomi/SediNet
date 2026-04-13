@@ -5,3 +5,5 @@
 /grain_size_sand_generic/res/*.*
 /grain_size_global/res/*.*
 /sandsnap_images/*.*
+__pycache__/*
+.vscode/*
