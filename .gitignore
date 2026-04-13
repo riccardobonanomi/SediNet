@@ -17,3 +17,6 @@ __pycache__/*
 *.json
 *.png
 *.pkl
+
+# ignore MyImages folder
+images/MyImages/*
