@@ -124,6 +124,11 @@ and that ```tensorflow-addons``` needs to be a specific version based on the ```
 pip install tensorflow-addons==x.x.x
 ```
 
+To avoid an error with ```kiras``` one should install version 2.1.0 of ```h5py```
+```
+pip install h5py==2.10.0
+```
+
 Then you can use the environment as usual as
 ```
 conda activate sedinet
