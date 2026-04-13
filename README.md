@@ -124,7 +124,7 @@ and that ```tensorflow-addons``` needs to be a specific version based on the ```
 pip install tensorflow-addons==x.x.x
 ```
 
-The you can use the environment as usual as
+Then you can use the environment as usual as
 ```
 conda activate sedinet
 ```
