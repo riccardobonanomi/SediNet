@@ -1,3 +1,4 @@
+# original gitignore
 /grain_size_gravel_generic/res/*.*
 /grain_population/res/*.*
 /grain_shape/res/*.*
@@ -5,5 +6,11 @@
 /grain_size_sand_generic/res/*.*
 /grain_size_global/res/*.*
 /sandsnap_images/*.*
+
+# ignore pycache and vscode settings
 __pycache__/*
 .vscode/*
+
+# ignore trained models and logs
+*.txt
+*.hdf5
