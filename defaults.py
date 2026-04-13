@@ -11,7 +11,7 @@
 # size of image in pixels. keep this consistent in training and application
 # suggestd: 512 -- 1024 (larger = larger GPU required)
 # integer
-IM_HEIGHT = 512 #768
+IM_HEIGHT = 768 #768
 IM_WIDTH = IM_HEIGHT #1024 #IM_HEIGHT
 
 # number of images to feed the network per step in epoch #suggested: 4 --16
@@ -34,7 +34,7 @@ MAX_LR = 1e-3
 
 # max. number of training epics (20 -100)
 # integer
-NUM_EPOCHS = 50
+NUM_EPOCHS = 100
 
 ## loss function for continuous models (2 choices)
 CONT_LOSS = 'pinball'
