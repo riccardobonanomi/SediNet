@@ -223,7 +223,8 @@ def train_sedinet_cat(SM, train_df, test_df, train_idx, test_idx,
                         epochs=NUM_EPOCHS,
                         callbacks=callbacks_list,
                         validation_data=valid_gen, #use_multiprocessing=True,
-                        validation_steps=len(test_idx)//valid_batch_size) #max_queue_size=10 ##VALID_BATCH_SIZE
+                        validation_steps=len(test_idx)//valid_batch_size,
+                        workers=1) #max_queue_size=10 ##VALID_BATCH_SIZE
 
         ###===================================================
         ## Plot the loss and accuracy as a function of epoch
@@ -386,7 +387,8 @@ def train_sedinet_siso_simo(SM, train_df, test_df, train_idx, test_idx, name,
                         epochs=NUM_EPOCHS,
                         callbacks=callbacks_list,
                         validation_data=valid_gen, #use_multiprocessing=True,
-                        validation_steps=len(test_idx)//valid_batch_size) #max_queue_size=10 ##VALID_BATCH_SIZE
+                        validation_steps=len(test_idx)//valid_batch_size,
+                        workers=1) #max_queue_size=10 ##VALID_BATCH_SIZE
 
 
         ###===================================================

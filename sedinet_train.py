@@ -28,6 +28,20 @@ else:
 from numpy import any as npany
 from sedinet_infer import *
 
+# trying to fix "tensorflow/core/kernels/data/generator_dataset_op.cc:103] Error occurred when finalizing GeneratorDataset iterator: Cancelled: Operation was cancelled"
+import os
+os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"   
+os.environ["CUDA_VISIBLE_DEVICES"]="0"
+os.environ["TF_ENABLE_GPU_GARBAGE_COLLECTION"]="false"
+
+from tensorflow.compat.v1 import ConfigProto
+from tensorflow.compat.v1 import InteractiveSession
+
+def fix_gpu():
+    config = ConfigProto()
+    config.gpu_options.allow_growth = True
+    session = InteractiveSession(config=config)
+
 #==============================================================
 if __name__ == '__main__':
 
@@ -45,6 +59,8 @@ if __name__ == '__main__':
             sys.exit()
         elif opt in ("-c"):
             configfile = arg
+        
+    fix_gpu()
 
     # load the user configs
     with open(os.getcwd()+os.sep+configfile) as f:
